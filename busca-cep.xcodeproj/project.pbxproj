@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8853D57526FD5DFA002AC197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853D57426FD5DFA002AC197 /* AppDelegate.swift */; };
-		8853D57726FD5DFA002AC197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853D57626FD5DFA002AC197 /* SceneDelegate.swift */; };
-		8853D57926FD5DFA002AC197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853D57826FD5DFA002AC197 /* ViewController.swift */; };
-		8853D57C26FD5DFA002AC197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8853D57A26FD5DFA002AC197 /* Main.storyboard */; };
 		8853D57E26FD5DFB002AC197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8853D57D26FD5DFB002AC197 /* Assets.xcassets */; };
 		8853D58126FD5DFB002AC197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8853D57F26FD5DFB002AC197 /* LaunchScreen.storyboard */; };
+		8853D59026FD60A5002AC197 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853D58E26FD60A5002AC197 /* HomeViewController.swift */; };
+		8853D59126FD60A5002AC197 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8853D58F26FD60A5002AC197 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8853D57126FD5DFA002AC197 /* busca-cep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "busca-cep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8853D57426FD5DFA002AC197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8853D57626FD5DFA002AC197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8853D57826FD5DFA002AC197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8853D57B26FD5DFA002AC197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8853D57D26FD5DFB002AC197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8853D58026FD5DFB002AC197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8853D58226FD5DFB002AC197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8853D58E26FD60A5002AC197 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8853D58F26FD60A5002AC197 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,46 @@
 		8853D57326FD5DFA002AC197 /* busca-cep */ = {
 			isa = PBXGroup;
 			children = (
+				8853D58826FD5E6B002AC197 /* Scenes */,
+				8853D58B26FD5F43002AC197 /* Sources */,
+				8853D58C26FD5F46002AC197 /* Resources */,
+			);
+			path = "busca-cep";
+			sourceTree = "<group>";
+		};
+		8853D58826FD5E6B002AC197 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8853D58D26FD601B002AC197 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8853D58B26FD5F43002AC197 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
 				8853D57426FD5DFA002AC197 /* AppDelegate.swift */,
-				8853D57626FD5DFA002AC197 /* SceneDelegate.swift */,
-				8853D57826FD5DFA002AC197 /* ViewController.swift */,
-				8853D57A26FD5DFA002AC197 /* Main.storyboard */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8853D58C26FD5F46002AC197 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				8853D57D26FD5DFB002AC197 /* Assets.xcassets */,
 				8853D57F26FD5DFB002AC197 /* LaunchScreen.storyboard */,
 				8853D58226FD5DFB002AC197 /* Info.plist */,
 			);
-			path = "busca-cep";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8853D58D26FD601B002AC197 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8853D58E26FD60A5002AC197 /* HomeViewController.swift */,
+				8853D58F26FD60A5002AC197 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +155,7 @@
 			files = (
 				8853D58126FD5DFB002AC197 /* LaunchScreen.storyboard in Resources */,
 				8853D57E26FD5DFB002AC197 /* Assets.xcassets in Resources */,
-				8853D57C26FD5DFA002AC197 /* Main.storyboard in Resources */,
+				8853D59126FD60A5002AC197 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8853D57926FD5DFA002AC197 /* ViewController.swift in Sources */,
 				8853D57526FD5DFA002AC197 /* AppDelegate.swift in Sources */,
-				8853D57726FD5DFA002AC197 /* SceneDelegate.swift in Sources */,
+				8853D59026FD60A5002AC197 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8853D57A26FD5DFA002AC197 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8853D57B26FD5DFA002AC197 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8853D57F26FD5DFB002AC197 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +307,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "busca-cep/Info.plist";
+				INFOPLIST_FILE = "busca-cep/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.useacademy.busca-cep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,7 +326,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "busca-cep/Info.plist";
+				INFOPLIST_FILE = "busca-cep/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.useacademy.busca-cep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
