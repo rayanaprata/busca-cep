@@ -12,6 +12,7 @@
 		8853D58126FD5DFB002AC197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8853D57F26FD5DFB002AC197 /* LaunchScreen.storyboard */; };
 		8853D59026FD60A5002AC197 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853D58E26FD60A5002AC197 /* HomeViewController.swift */; };
 		8853D59126FD60A5002AC197 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8853D58F26FD60A5002AC197 /* HomeViewController.xib */; };
+		88749AF22725A9AD00A6D8A7 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88749AF12725A9AD00A6D8A7 /* AddressModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8853D58226FD5DFB002AC197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8853D58E26FD60A5002AC197 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8853D58F26FD60A5002AC197 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		88749AF12725A9AD00A6D8A7 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +92,19 @@
 		8853D58D26FD601B002AC197 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				88749AF02725A98C00A6D8A7 /* Model */,
 				8853D58E26FD60A5002AC197 /* HomeViewController.swift */,
 				8853D58F26FD60A5002AC197 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		88749AF02725A98C00A6D8A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88749AF12725A9AD00A6D8A7 /* AddressModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			files = (
 				8853D57526FD5DFA002AC197 /* AppDelegate.swift in Sources */,
 				8853D59026FD60A5002AC197 /* HomeViewController.swift in Sources */,
+				88749AF22725A9AD00A6D8A7 /* AddressModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
