@@ -7,20 +7,11 @@
 
 import Foundation
 
-struct AddressModel {
+struct AddressModel: Decodable {
     let cep: String
+    let logradour: String
+    let bairro: String
+    let localidade: String
+    let uf: String
+    let complemento: String
 }
-
-
-//    {
-//      "cep": "89040-115",
-//      "logradouro": "Rua Maria Müller Gieseler",
-//      "complemento": "",
-//      "bairro": "Velha",
-//      "localidade": "Blumenau",
-//      "uf": "SC",
-//      "ibge": "4202404",
-//      "gia": "",
-//      "ddd": "47",
-//      "siafi": "8047"
-//    }
