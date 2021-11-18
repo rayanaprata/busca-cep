@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     // MARK: Actions
     @IBAction func handlerButtonSearch(_ sender: Any) {
         if let textCep = textFieldCEP.text, textCep.count == 8 {
+            print(textCep)
             findAddressFrom(cep: textCep)
         } else {
             // TODO: Exibir alert informando que o cep é inválido
@@ -62,7 +63,7 @@ class HomeViewController: UIViewController {
             
             do {
                 let model = try JSONDecoder().decode(AddressModel.self, from: data)
-                print("Endereço: ", model)
+                print("Endereço: \(model)")
             } catch {
                 print("deu erro no parse do modelo!")
             }

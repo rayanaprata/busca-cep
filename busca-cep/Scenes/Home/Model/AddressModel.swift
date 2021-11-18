@@ -9,9 +9,10 @@ import Foundation
 
 struct AddressModel: Decodable {
     let cep: String
-    let logradour: String
+    let logradouro: String
     let bairro: String
     let localidade: String
     let uf: String
     let complemento: String
+    let number: String?
 }
