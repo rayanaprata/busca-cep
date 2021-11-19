@@ -63,7 +63,9 @@ class HomeViewController: UIViewController {
             
             do {
                 let model = try JSONDecoder().decode(AddressModel.self, from: data)
-                print("Endereço: \(model)")
+                DispatchQueue.main.async {
+                    self.openFormAddress(model: model)
+                }
             } catch {
                 print("deu erro no parse do modelo!")
             }
@@ -71,6 +73,11 @@ class HomeViewController: UIViewController {
         }
         
         task.resume()
+    }
+    
+    private func openFormAddress(model: AddressModel) {
+        let viewController = FormAddressViewController(addressModel: model)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
 }
