@@ -66,20 +66,16 @@
                         </textField>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-Dx-Hym">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-Dx-Hym">
                     <rect key="frame" x="20" y="782" width="374" height="50"/>
                     <color key="backgroundColor" systemColor="systemRedColor"/>
-                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal">
-                        <attributedString key="attributedTitle">
-                            <fragment content="Gerar Etiqueta">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="osk-aQ-6pq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Gerar Etiqueta">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="handlerButtonGenerateTag:" destination="-1" eventType="touchUpInside" id="d6q-Hj-Tkx"/>
@@ -89,12 +85,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Szf-Dx-Hym" secondAttribute="bottom" constant="30" id="6PE-3W-kJV"/>
                 <constraint firstItem="EYA-Sc-2B6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BBJ-E6-twC"/>
                 <constraint firstItem="EYA-Sc-2B6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="U5H-p1-whg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EYA-Sc-2B6" secondAttribute="trailing" constant="20" id="kAK-Hg-di1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Szf-Dx-Hym" secondAttribute="trailing" constant="20" id="kG4-1X-6mI"/>
                 <constraint firstItem="Szf-Dx-Hym" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rsb-IW-Ymp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Szf-Dx-Hym" secondAttribute="bottom" constant="30" id="whU-3b-USu"/>
             </constraints>
             <point key="canvasLocation" x="108.69565217391305" y="93.75"/>
         </view>
