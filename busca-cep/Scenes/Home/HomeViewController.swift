@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     // MARK: Properties
+    private var viewModel = HomeViewModel()
     
     // MARK: Outlets
     @IBOutlet weak var textFieldCEP: UITextField!
@@ -26,15 +27,14 @@ class HomeViewController: UIViewController {
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupUI()
+
     }
     
     // MARK: Actions
     @IBAction func handlerButtonSearch(_ sender: Any) {
         if let textCep = textFieldCEP.text, textCep.count == 8 {
             print(textCep)
-            findAddressFrom(cep: textCep)
+            viewModel.findAddressFrom(cep: textCep)
         } else {
             // TODO: Exibir alert informando que o cep é inválido
         }
@@ -44,33 +44,9 @@ class HomeViewController: UIViewController {
 //    https://viacep.com.br/ws/89040115/json/
     
     // MARK: Methods
-    private func setupUI() {
-        
-    }
     
-    func findAddressFrom(cep: String) {
+    private func bindEvents() {
         
-        let urlString = "https://viacep.com.br/ws/\(cep)/json/"
-        guard let url = URL(string: urlString) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            // error vai conter o tipo de erro da requisicao
-            // response vai conter infos a respeito da requisicao como cabecalho, statusCode
-            // o data vai conter o payload de retorno
-            
-            guard let data = data else { return }
-            
-            do {
-                let model = try JSONDecoder().decode(AddressModel.self, from: data)
-                self.openFormAddress(model: model)
-            } catch {
-                print("deu erro no parse do modelo!")
-            }
-            
-        }
-        
-        task.resume()
     }
     
     private func openFormAddress(model: AddressModel) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883A29DC274FA25700470E50 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883A29DB274FA25700470E50 /* HomeViewModel.swift */; };
 		883CE844274F183600AE5054 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CE842274F183600AE5054 /* AddressViewController.swift */; };
 		883CE845274F183600AE5054 /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883CE843274F183600AE5054 /* AddressViewController.xib */; };
 		883D65BC2745D58900B26756 /* FormAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D65BA2745D58900B26756 /* FormAddressViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883A29DB274FA25700470E50 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		883CE842274F183600AE5054 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		883CE843274F183600AE5054 /* AddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
 		883D65BA2745D58900B26756 /* FormAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddressViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				88749AF02725A98C00A6D8A7 /* Model */,
+				883A29DB274FA25700470E50 /* HomeViewModel.swift */,
 				8853D58E26FD60A5002AC197 /* HomeViewController.swift */,
 				8853D58F26FD60A5002AC197 /* HomeViewController.xib */,
 			);
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8853D57526FD5DFA002AC197 /* AppDelegate.swift in Sources */,
+				883A29DC274FA25700470E50 /* HomeViewModel.swift in Sources */,
 				8853D59026FD60A5002AC197 /* HomeViewController.swift in Sources */,
 				88749AF22725A9AD00A6D8A7 /* AddressModel.swift in Sources */,
 				883CE844274F183600AE5054 /* AddressViewController.swift in Sources */,
