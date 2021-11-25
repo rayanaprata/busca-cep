@@ -10,7 +10,7 @@ import UIKit
 class FormAddressViewController: UIViewController {
 
     // MARK: Properties
-    private let addressModel: AddressModel
+    private var addressModel: AddressModel
     
     // MARK: Outlets
     @IBOutlet weak var textFieldCEP: UITextField!
@@ -40,6 +40,19 @@ class FormAddressViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func handlerButtonGenerateTag(_ sender: Any) {
+        
+        if let number = textFieldNumber.text, number.count > 0 {
+            addressModel.number = number
+            addressModel.complemento = textFieldComplement.text ?? ""
+            let viewController = AddressViewController(addressTag: getAddressTag())
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Alerta", message: "O campo número é obrigatório", preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(actionOk)
+            present(alert, animated: true, completion: nil)
+        }
+
     }
     
     // MARK: Methods
@@ -51,6 +64,29 @@ class FormAddressViewController: UIViewController {
         textFieldUF.text = addressModel.uf
         textFieldComplement.text = addressModel.complemento
         
+        // verifica se já existe algum complemento
+        let isEnableComplement = addressModel.complemento.count == 0
+        textFieldComplement.isEnabled = isEnableComplement
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapViewMain))
+        view.addGestureRecognizer(tap)
     }
 
+    @objc func tapViewMain() {
+        view.endEditing(true)
+    }
+    
+    private func getAddressTag() -> String {
+        let number = addressModel.number ?? ""
+        
+        return """
+            Destinatário:
+            \(addressModel.logradouro), \(number)
+            \(addressModel.bairro),
+            \(addressModel.localidade)-\(addressModel.uf)
+            CEP: \(addressModel.cep)
+            \(addressModel.complemento)
+        """
+    }
+    
 }

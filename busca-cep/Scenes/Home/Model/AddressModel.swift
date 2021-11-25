@@ -13,6 +13,6 @@ struct AddressModel: Decodable {
     let bairro: String
     let localidade: String
     let uf: String
-    let complemento: String
-    let number: String?
+    var complemento: String
+    var number: String?
 }
