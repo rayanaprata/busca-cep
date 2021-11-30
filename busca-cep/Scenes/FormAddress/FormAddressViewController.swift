@@ -44,7 +44,8 @@ class FormAddressViewController: UIViewController {
         if let number = textFieldNumber.text, number.count > 0 {
             addressModel.number = number
             addressModel.complemento = textFieldComplement.text ?? ""
-            let viewController = AddressViewController(addressTag: getAddressTag())
+            let viewController = AddressViewController(addressTag: addressModel.getAddressFormatted()
+            )
             navigationController?.pushViewController(viewController, animated: true)
         } else {
             let alert = UIAlertController(title: "Alerta", message: "O campo número é obrigatório", preferredStyle: .alert)
@@ -74,19 +75,6 @@ class FormAddressViewController: UIViewController {
 
     @objc func tapViewMain() {
         view.endEditing(true)
-    }
-    
-    private func getAddressTag() -> String {
-        let number = addressModel.number ?? ""
-        
-        return """
-            Destinatário:
-            \(addressModel.logradouro), \(number)
-            \(addressModel.bairro),
-            \(addressModel.localidade)-\(addressModel.uf)
-            CEP: \(addressModel.cep)
-            \(addressModel.complemento)
-        """
     }
     
 }

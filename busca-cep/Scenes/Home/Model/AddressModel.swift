@@ -15,4 +15,18 @@ struct AddressModel: Decodable {
     let uf: String
     var complemento: String
     var number: String?
+    
+    func getAddressFormatted() -> String {
+        let number = number ?? ""
+        
+        return """
+            Destinatário:
+            \(logradouro), \(number)
+            \(bairro),
+            \(localidade)-\(uf)
+            CEP: \(cep)
+            \(complemento)
+        """
+    }
+    
 }
