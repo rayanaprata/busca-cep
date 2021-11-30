@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bindEvents()
     }
     
     // MARK: Actions
@@ -46,7 +46,9 @@ class HomeViewController: UIViewController {
     // MARK: Methods
     
     private func bindEvents() {
-        
+        viewModel.didSuccess = { model in
+            self.openFormAddress(model: model)
+        }
     }
     
     private func openFormAddress(model: AddressModel) {
